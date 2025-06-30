@@ -20,6 +20,37 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
+  static String m0(time) => "إعادة إرسال الرمز خلال ${time}";
+
+  static String m1(phone_number) =>
+      "تم إرسال رسالة نصية إلى ${phone_number}، أدخل الرمز المكون من 4 أرقام";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "Personal_id": MessageLookupByLibrary.simpleMessage("رقم البطاقه الشخصية"),
+    "Resend_code_time": m0,
+    "change_password": MessageLookupByLibrary.simpleMessage(
+      "تغيير كلمة المرور",
+    ),
+    "change_password_message": m1,
+    "confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
+    "confirm_new_password": MessageLookupByLibrary.simpleMessage(
+      "تأكيد كلمة المرور الجديدة",
+    ),
+    "forgot_password": MessageLookupByLibrary.simpleMessage(
+      " هل نسيت كلمة المرور؟",
+    ),
+    "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "new_password": MessageLookupByLibrary.simpleMessage("كلمة المرور الجديدة"),
+    "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "password_changed_successfully": MessageLookupByLibrary.simpleMessage(
+      "تم تغيير كلمة المرور بنجاح",
+    ),
+    "passwords_dose_not_match": MessageLookupByLibrary.simpleMessage(
+      "كلمة المرور غير متطابقة",
+    ),
+    "wrong_password": MessageLookupByLibrary.simpleMessage(
+      "كلمة المرور غير صحيحة",
+    ),
+  };
 }

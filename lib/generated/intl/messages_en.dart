@@ -20,11 +20,31 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
+  static String m0(time) => "Resend  code within ${time}";
+
+  static String m1(phone_number) =>
+      "A text message has been sent to ${phone_number}, enter the 4-digit code";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "app_description": MessageLookupByLibrary.simpleMessage(
-      "A new Flutter project.",
+    "Personal_id": MessageLookupByLibrary.simpleMessage("Personal ID number"),
+    "Resend_code_time": m0,
+    "change_password": MessageLookupByLibrary.simpleMessage("Change Password"),
+    "change_password_message": m1,
+    "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
+    "confirm_new_password": MessageLookupByLibrary.simpleMessage(
+      "Confirm New Password",
     ),
-    "app_title": MessageLookupByLibrary.simpleMessage("Catching Kawa"),
+    "forgot_password": MessageLookupByLibrary.simpleMessage("Forgot password?"),
+    "login": MessageLookupByLibrary.simpleMessage("Login"),
+    "new_password": MessageLookupByLibrary.simpleMessage("New Password"),
+    "password": MessageLookupByLibrary.simpleMessage("Password"),
+    "password_changed_successfully": MessageLookupByLibrary.simpleMessage(
+      "Password changed successfully",
+    ),
+    "passwords_dose_not_match": MessageLookupByLibrary.simpleMessage(
+      "Passwords dose not match",
+    ),
+    "wrong_password": MessageLookupByLibrary.simpleMessage("Wrong password"),
   };
 }

@@ -54,16 +54,116 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Catching Kawa`
-  String get app_title {
-    return Intl.message('Catching Kawa', name: 'app_title', desc: '', args: []);
+  /// `Personal ID number`
+  String get Personal_id {
+    return Intl.message(
+      'Personal ID number',
+      name: 'Personal_id',
+      desc: '',
+      args: [],
+    );
   }
 
-  /// `A new Flutter project.`
-  String get app_description {
+  /// `Password`
+  String get password {
+    return Intl.message('Password', name: 'password', desc: '', args: []);
+  }
+
+  /// `Wrong password`
+  String get wrong_password {
     return Intl.message(
-      'A new Flutter project.',
-      name: 'app_description',
+      'Wrong password',
+      name: 'wrong_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forgot password?`
+  String get forgot_password {
+    return Intl.message(
+      'Forgot password?',
+      name: 'forgot_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login`
+  String get login {
+    return Intl.message('Login', name: 'login', desc: '', args: []);
+  }
+
+  /// `A text message has been sent to {phone_number}, enter the 4-digit code`
+  String change_password_message(Object phone_number) {
+    return Intl.message(
+      'A text message has been sent to $phone_number, enter the 4-digit code',
+      name: 'change_password_message',
+      desc: 'Message shown when changing password',
+      args: [phone_number],
+    );
+  }
+
+  /// `Resend  code within {time}`
+  String Resend_code_time(Object time) {
+    return Intl.message(
+      'Resend  code within $time',
+      name: 'Resend_code_time',
+      desc: 'Message shown when the user can resend the code',
+      args: [time],
+    );
+  }
+
+  /// `Confirm`
+  String get confirm {
+    return Intl.message('Confirm', name: 'confirm', desc: '', args: []);
+  }
+
+  /// `Change Password`
+  String get change_password {
+    return Intl.message(
+      'Change Password',
+      name: 'change_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New Password`
+  String get new_password {
+    return Intl.message(
+      'New Password',
+      name: 'new_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm New Password`
+  String get confirm_new_password {
+    return Intl.message(
+      'Confirm New Password',
+      name: 'confirm_new_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Passwords dose not match`
+  String get passwords_dose_not_match {
+    return Intl.message(
+      'Passwords dose not match',
+      name: 'passwords_dose_not_match',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password changed successfully`
+  String get password_changed_successfully {
+    return Intl.message(
+      'Password changed successfully',
+      name: 'password_changed_successfully',
       desc: '',
       args: [],
     );
