@@ -1,0 +1,47 @@
+{
+    "@@locale": "en",
+    "Personal_id": "Personal ID number",
+    "@Personal_id": {},
+    "password": "Password",
+    "@password": {},
+       "wrong_password": "Wrong password",
+    "@wrong_password": {},
+    "forgot_password": "Forgot password?",
+    "@forgot_password": {},
+    "login": "Login",
+    "@login": {},
+    "change_password_message":"A text message has been sent to {phone_number}, enter the 4-digit code",
+    "@change_password_message": {
+        "description": "Message shown when changing password",
+        "placeholders": {
+            "phone_number": {
+                "example": "1234567890",
+                "description": "User's phone number"
+            }
+        }
+    },
+    "Resend_code_time":"Resend  code within {time}",
+    "@Resend_code_time": {
+        "description": "Message shown when the user can resend the code",
+        "placeholders": {
+            "time": {
+                "example": "00:54",
+                "description": "Time remaining to resend the code"
+            }
+        }
+    }
+    ,"confirm": "Confirm",
+"@confirm": {}
+    ,"change_password": "Change Password",
+    "@change_password": {},
+    "new_password": "New Password",
+    "@new_password": {},
+    "confirm_new_password": "Confirm New Password",
+    "@confirm_new_password": {},
+    "passwords_dose_not_match": "Passwords dose not match",
+    "@passwords_dose_not_match": {},
+    "password_changed_successfully": "Password changed successfully",
+    "@password_changed_successfully": {}
+
+
+}

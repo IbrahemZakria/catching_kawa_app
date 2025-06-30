@@ -1,0 +1,48 @@
+
+    {"@@locale": "ar",
+    "Personal_id": "رقم البطاقه الشخصية",
+    "@Personal_id": {},
+    "password": "كلمة المرور",
+    "@password": {},
+    "forgot_password": " هل نسيت كلمة المرور؟",
+    "@forgot_password": {},
+        "wrong_password": "كلمة المرور غير صحيحة",
+    "@wrong_password": {},
+
+    "login": "تسجيل الدخول",
+    "@login": {},
+    "change_password_message":"تم إرسال رسالة نصية إلى {phone_number}، أدخل الرمز المكون من 4 أرقام",
+    "@change_password_message": {
+        "description": "Message shown when changing password",
+        "placeholders": {
+            "phone_number": {
+                "example": "1234567890",
+                "description": "User's phone number"
+            }
+        }
+    },
+    "Resend_code_time":"إعادة إرسال الرمز خلال {time}",
+    "@Resend_code_time": {
+        "description": "Message shown when the user can resend the code",
+        "placeholders": {
+            "time": {
+                "example": "00:54",
+                "description": "Time remaining to resend the code"
+            }
+        }
+    }
+    ,"confirm": "تأكيد",
+"@confirm": {}
+    ,"change_password": "تغيير كلمة المرور",
+    "@change_password": {},
+    "new_password": "كلمة المرور الجديدة",
+    "@new_password": {},
+    "confirm_new_password": "تأكيد كلمة المرور الجديدة",
+    "@confirm_new_password": {},
+    "passwords_dose_not_match": "كلمة المرور غير متطابقة",
+    "@passwords_dose_not_match": {},
+    "password_changed_successfully": "تم تغيير كلمة المرور بنجاح",
+    "@password_changed_successfully": {}
+
+
+}
