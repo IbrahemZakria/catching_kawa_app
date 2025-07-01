@@ -1,3 +1,4 @@
+import 'package:catching_kawa_app/core/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 abstract class Styles {
@@ -17,12 +18,17 @@ abstract class Styles {
   );
   static const TextStyle textStyle14 = TextStyle(
     fontSize: 14,
-    fontWeight: FontWeight.w500,
-    color: Colors.grey,
+    fontWeight: FontWeight.w700,
+    color: AppColors.grey,
+  );
+  static const TextStyle textStyle14Dark = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w700,
+    color: AppColors.darkgrey,
   );
   static const TextStyle textStyle16 = TextStyle(
     fontSize: 16,
-    fontWeight: FontWeight.w500,
-    color: Colors.grey, // kprimarycolor
+    fontWeight: FontWeight.w400,
+    color: Colors.black, // kprimarycolor
   );
 }

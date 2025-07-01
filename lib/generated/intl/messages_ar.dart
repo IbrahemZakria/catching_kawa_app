@@ -29,6 +29,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "Personal_id": MessageLookupByLibrary.simpleMessage("رقم البطاقه الشخصية"),
     "Resend_code_time": m0,
+    "about_us": MessageLookupByLibrary.simpleMessage("معلومات عنا"),
     "change_password": MessageLookupByLibrary.simpleMessage(
       "تغيير كلمة المرور",
     ),
@@ -37,9 +38,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "confirm_new_password": MessageLookupByLibrary.simpleMessage(
       "تأكيد كلمة المرور الجديدة",
     ),
+    "contact_us": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
+    "enter_id": MessageLookupByLibrary.simpleMessage("ادخل رقم البطاقه"),
     "forgot_password": MessageLookupByLibrary.simpleMessage(
       " هل نسيت كلمة المرور؟",
     ),
+    "lang": MessageLookupByLibrary.simpleMessage("عربى"),
     "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "new_password": MessageLookupByLibrary.simpleMessage("كلمة المرور الجديدة"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
@@ -48,6 +52,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "passwords_dose_not_match": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور غير متطابقة",
+    ),
+    "required_id": MessageLookupByLibrary.simpleMessage(
+      "يرجى إدخال رقم البطاقة الشخصية",
+    ),
+    "required_password": MessageLookupByLibrary.simpleMessage(
+      "يرجى إدخال كلمة المرور",
     ),
     "wrong_password": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور غير صحيحة",

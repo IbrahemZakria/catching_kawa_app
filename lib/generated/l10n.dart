@@ -54,11 +54,36 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `English`
+  String get lang {
+    return Intl.message('English', name: 'lang', desc: '', args: []);
+  }
+
   /// `Personal ID number`
   String get Personal_id {
     return Intl.message(
       'Personal ID number',
       name: 'Personal_id',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your password`
+  String get required_password {
+    return Intl.message(
+      'Please enter your password',
+      name: 'required_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your ID number`
+  String get required_id {
+    return Intl.message(
+      'Please enter your ID number',
+      name: 'required_id',
       desc: '',
       args: [],
     );
@@ -167,6 +192,26 @@ class S {
       desc: '',
       args: [],
     );
+  }
+
+  /// `Enter your ID number`
+  String get enter_id {
+    return Intl.message(
+      'Enter your ID number',
+      name: 'enter_id',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contact Us`
+  String get contact_us {
+    return Intl.message('Contact Us', name: 'contact_us', desc: '', args: []);
+  }
+
+  /// `About Us`
+  String get about_us {
+    return Intl.message('About Us', name: 'about_us', desc: '', args: []);
   }
 }
 

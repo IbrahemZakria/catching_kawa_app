@@ -29,13 +29,17 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "Personal_id": MessageLookupByLibrary.simpleMessage("Personal ID number"),
     "Resend_code_time": m0,
+    "about_us": MessageLookupByLibrary.simpleMessage("About Us"),
     "change_password": MessageLookupByLibrary.simpleMessage("Change Password"),
     "change_password_message": m1,
     "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
     "confirm_new_password": MessageLookupByLibrary.simpleMessage(
       "Confirm New Password",
     ),
+    "contact_us": MessageLookupByLibrary.simpleMessage("Contact Us"),
+    "enter_id": MessageLookupByLibrary.simpleMessage("Enter your ID number"),
     "forgot_password": MessageLookupByLibrary.simpleMessage("Forgot password?"),
+    "lang": MessageLookupByLibrary.simpleMessage("English"),
     "login": MessageLookupByLibrary.simpleMessage("Login"),
     "new_password": MessageLookupByLibrary.simpleMessage("New Password"),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
@@ -44,6 +48,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "passwords_dose_not_match": MessageLookupByLibrary.simpleMessage(
       "Passwords dose not match",
+    ),
+    "required_id": MessageLookupByLibrary.simpleMessage(
+      "Please enter your ID number",
+    ),
+    "required_password": MessageLookupByLibrary.simpleMessage(
+      "Please enter your password",
     ),
     "wrong_password": MessageLookupByLibrary.simpleMessage("Wrong password"),
   };

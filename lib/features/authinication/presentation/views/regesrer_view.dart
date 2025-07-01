@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 class RegesrerView extends StatelessWidget {
   const RegesrerView({super.key});
+  static const String routeName = '/regester';
 
   @override
   Widget build(BuildContext context) {

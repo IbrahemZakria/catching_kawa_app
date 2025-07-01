@@ -1,7 +1,13 @@
 {
     "@@locale": "en",
+      "lang":"English",
+"@lang": {},
     "Personal_id": "Personal ID number",
     "@Personal_id": {},
+    "required_password": "Please enter your password",
+    "@required_password": {},
+    "required_id": "Please enter your ID number",
+    "@required_id": {},
     "password": "Password",
     "@password": {},
        "wrong_password": "Wrong password",
@@ -42,6 +48,11 @@
     "@passwords_dose_not_match": {},
     "password_changed_successfully": "Password changed successfully",
     "@password_changed_successfully": {}
+    ,"enter_id":"Enter your ID number",
+"@enter_id": {}
+,"contact_us":"Contact Us",
+"@contact_us": {},"about_us":"About Us",
+"@about_us": {}
 
 
 }

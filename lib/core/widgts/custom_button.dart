@@ -1,3 +1,4 @@
+import 'package:catching_kawa_app/core/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
@@ -10,8 +11,8 @@ class CustomButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.blue,
-          borderRadius: BorderRadius.circular(8),
+          color: AppColors.primary,
+          borderRadius: BorderRadius.circular(16),
         ),
         width: double.infinity,
         height: 60,

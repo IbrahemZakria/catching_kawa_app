@@ -1,14 +1,17 @@
+import 'package:catching_kawa_app/core/utils/assets.dart';
 import 'package:catching_kawa_app/core/utils/styels.dart';
 import 'package:catching_kawa_app/core/widgts/custom_button.dart';
 import 'package:catching_kawa_app/core/widgts/custome_text_form_field.dart';
 import 'package:catching_kawa_app/core/widgts/user_message.dart';
+import 'package:catching_kawa_app/features/authinication/presentation/views/widgets/all_login_icons_widget.dart';
 import 'package:catching_kawa_app/features/authinication/presentation/views_model/password_visabilty/password_visabilty_cubit.dart';
+import 'package:catching_kawa_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LoginViewBody extends StatelessWidget {
   LoginViewBody({super.key});
-  final TextEditingController emailControler = TextEditingController();
+  final TextEditingController idControler = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
 
@@ -22,86 +25,94 @@ class LoginViewBody extends StatelessWidget {
           key: _formKey,
           child: Scaffold(
             body: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(height: size.height * .2),
-                  Text("Login", style: Styles.textStyle32),
-                  SizedBox(height: 16),
-                  Text("login now to our world", style: Styles.textStyle16),
-                  SizedBox(height: 16),
-
-                  CustomeTextFormField.custometextformfield(
-                    controller: emailControler,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter an email';
-                      }
-                      return null;
-                    },
-                    textType: TextInputType.emailAddress,
-                    hintText: 'Email',
-                    prefixIcon: IconButton(
-                      onPressed: () {},
-                      icon: Icon(Icons.email_outlined),
+              padding: const EdgeInsets.symmetric(horizontal: 24.0),
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    SizedBox(height: size.height * .1),
+                    Image.asset(AssetsData.logo, height: size.height * .13),
+                    SizedBox(height: 16),
+                    Row(
+                      children: [
+                        Text(
+                          S.of(context).Personal_id,
+                          style: Styles.textStyle16,
+                        ),
+                      ],
                     ),
-                  ),
-                  SizedBox(height: 16),
-                  BlocBuilder<PasswordVisabiltyCubit, PasswordVisabiltyState>(
-                    builder: (context, state) {
-                      var passbloc = BlocProvider.of<PasswordVisabiltyCubit>(
-                        context,
-                      );
+                    SizedBox(height: 16),
 
-                      return CustomeTextFormField.custometextformfield(
-                        controller: passwordController,
-                        validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return 'Please enter an email';
-                          }
-                          return null;
-                        },
-                        textType: TextInputType.visiblePassword,
-                        suffixIcon: IconButton(
-                          onPressed: () {
-                            passbloc.passwordVisabilty();
-                          },
-                          icon: Icon(passbloc.passwordIcon),
-                        ),
-                        obscureText: passbloc.visability,
-                        hintText: 'password',
-                        prefixIcon: IconButton(
-                          onPressed: () {},
-                          icon: Icon(Icons.lock_outline_rounded),
-                        ),
-                      );
-                    },
-                  ),
-                  SizedBox(height: size.height * .05),
-
-                  CustomButton(
-                    text: "login",
-                    onTap: () {
-                      if (_formKey.currentState!.validate()) {
-                        UserMessage.show(message: 'message');
-                      }
-                    },
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Don't have an account ?",
-                        style: Styles.textStyle18,
-                      ),
-                      TextButton(
+                    CustomeTextFormField.custometextformfield(
+                      controller: idControler,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return S.of(context).required_id;
+                        }
+                        return null;
+                      },
+                      prefixIcon: IconButton(
                         onPressed: () {},
-                        child: Text("Regester", style: TextStyle(fontSize: 18)),
+                        icon: Icon(Icons.perm_identity),
                       ),
-                    ],
-                  ),
-                ],
+                      textType: TextInputType.phone,
+                      hintText: S.of(context).enter_id,
+                    ),
+                    SizedBox(height: 16),
+                    Row(
+                      children: [
+                        Text(
+                          S.of(context).required_password,
+                          style: Styles.textStyle16,
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 16),
+
+                    BlocBuilder<PasswordVisabiltyCubit, PasswordVisabiltyState>(
+                      builder: (context, state) {
+                        var passbloc = BlocProvider.of<PasswordVisabiltyCubit>(
+                          context,
+                        );
+
+                        return CustomeTextFormField.custometextformfield(
+                          controller: passwordController,
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return S.of(context).required_password;
+                            }
+                            return null;
+                          },
+                          textType: TextInputType.visiblePassword,
+                          suffixIcon: IconButton(
+                            onPressed: () {
+                              passbloc.passwordVisabilty();
+                            },
+                            icon: Icon(passbloc.passwordIcon),
+                          ),
+                          obscureText: passbloc.visability,
+                          hintText: S.of(context).password,
+                          prefixIcon: IconButton(
+                            onPressed: () {},
+                            icon: Icon(Icons.lock),
+                          ),
+                        );
+                      },
+                    ),
+                    SizedBox(height: 32),
+
+                    CustomButton(
+                      text: S.of(context).login,
+                      onTap: () {
+                        if (_formKey.currentState!.validate()) {
+                          UserMessage.show(message: 'message');
+                        }
+                      },
+                    ),
+                    SizedBox(height: size.height * .05),
+
+                    AllLoginIconsWidget(),
+                  ],
+                ),
               ),
             ),
           ),

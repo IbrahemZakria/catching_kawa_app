@@ -1,3 +1,5 @@
+import 'package:catching_kawa_app/core/utils/colors.dart';
+import 'package:catching_kawa_app/core/utils/styels.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -30,7 +32,7 @@ class CustomeTextFormField extends StatelessWidget {
   TextEditingController? controller;
   int? maxLines;
   TextInputType? textType;
-  OutlineInputBorder buildborder({Color bordercolor = Colors.black}) {
+  OutlineInputBorder buildborder({Color bordercolor = AppColors.grey}) {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(borderRadius ?? 12),
       borderSide: BorderSide(color: bordercolor, width: 2),
@@ -56,12 +58,12 @@ class CustomeTextFormField extends StatelessWidget {
           suffixIcon: suffixIcon,
           prefixIcon: prefixIcon,
           hintText: hintText ?? '',
-          hintStyle: TextStyle(color: textColor),
+          hintStyle: Styles.textStyle14,
           enabledBorder: buildborder(),
 
-          errorBorder: buildborder(bordercolor: Colors.red),
-          focusedBorder: buildborder(bordercolor: Colors.black),
-          focusedErrorBorder: buildborder(bordercolor: Colors.black),
+          errorBorder: buildborder(bordercolor: AppColors.grey),
+          focusedBorder: buildborder(bordercolor: AppColors.grey),
+          focusedErrorBorder: buildborder(bordercolor: AppColors.grey),
         ),
       ),
     );
