@@ -1,6 +1,12 @@
+import 'package:catching_kawa_app/core/helper/services/shared_preferance.dart';
 import 'package:catching_kawa_app/core/utils/colors.dart';
+import 'package:catching_kawa_app/core/utils/contant.dart';
 import 'package:catching_kawa_app/core/utils/cubits/localization/localization_cubit.dart';
+import 'package:catching_kawa_app/core/utils/styels.dart';
+import 'package:catching_kawa_app/features/authinication/presentation/views/forgot_password_view.dart';
 import 'package:catching_kawa_app/features/authinication/presentation/views/login_view.dart';
+import 'package:catching_kawa_app/features/authinication/presentation/views/new_password_view.dart';
+import 'package:catching_kawa_app/features/authinication/presentation/views/o_t_p_view.dart';
 import 'package:catching_kawa_app/features/authinication/presentation/views/regesrer_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -14,14 +20,13 @@ class CatchingKawaApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => LocalizationCubit()..changeLanguage(),
+      create: (context) => LocalizationCubit(),
       child: BlocBuilder<LocalizationCubit, LocalizationState>(
         builder: (context, state) {
-          String langCode = 'en'; // Default language code
+          String langCode =
+              SharedPreferance.getData<String>(Constants.key) ??
+              'en'; // Default language code
 
-          if (state is LanguageChangedState) {
-            langCode = state.languageCode;
-          }
           return MaterialApp(
             debugShowCheckedModeBanner: false,
             locale: Locale(langCode),
@@ -34,6 +39,12 @@ class CatchingKawaApp extends StatelessWidget {
             supportedLocales: S.delegate.supportedLocales,
             title: 'Flutter Demo',
             theme: ThemeData(
+              appBarTheme: AppBarTheme(
+                backgroundColor: AppColors.white,
+                titleTextStyle: Styles.textStyle20,
+                centerTitle: true,
+                iconTheme: IconThemeData(color: AppColors.primary),
+              ),
               iconTheme: IconThemeData(color: AppColors.primary),
               scaffoldBackgroundColor: AppColors.white,
               fontFamily: 'cairo',
@@ -43,6 +54,10 @@ class CatchingKawaApp extends StatelessWidget {
             routes: {
               LoginView.routeName: (context) => const LoginView(),
               RegesrerView.routeName: (context) => const RegesrerView(),
+              OTPView.routeName: (context) => const OTPView(),
+              ForgotPasswordView.routeName: (context) =>
+                  const ForgotPasswordView(),
+              NewPasswordView.routeName: (context) => const NewPasswordView(),
             },
             initialRoute: LoginView.routeName,
           );

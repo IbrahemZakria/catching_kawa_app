@@ -37,14 +37,20 @@ class MessageLookup extends MessageLookupByLibrary {
       "Confirm New Password",
     ),
     "contact_us": MessageLookupByLibrary.simpleMessage("Contact Us"),
+    "did_you_forgot_password": MessageLookupByLibrary.simpleMessage(
+      "Forgot password?",
+    ),
     "enter_id": MessageLookupByLibrary.simpleMessage("Enter your ID number"),
-    "forgot_password": MessageLookupByLibrary.simpleMessage("Forgot password?"),
+    "forgot_password": MessageLookupByLibrary.simpleMessage(" Forgot Password"),
     "lang": MessageLookupByLibrary.simpleMessage("English"),
     "login": MessageLookupByLibrary.simpleMessage("Login"),
     "new_password": MessageLookupByLibrary.simpleMessage("New Password"),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
     "password_changed_successfully": MessageLookupByLibrary.simpleMessage(
       "Password changed successfully",
+    ),
+    "password_mismatch": MessageLookupByLibrary.simpleMessage(
+      "Passwords do not match",
     ),
     "passwords_dose_not_match": MessageLookupByLibrary.simpleMessage(
       "Passwords dose not match",

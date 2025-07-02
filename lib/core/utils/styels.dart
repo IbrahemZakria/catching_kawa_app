@@ -13,6 +13,7 @@ abstract class Styles {
     color: Colors.black, // kprimarycolor
   );
   static const TextStyle textStyle20 = TextStyle(
+    fontWeight: FontWeight.w700,
     fontSize: 20,
     color: Colors.black, // kprimarycolor
   );

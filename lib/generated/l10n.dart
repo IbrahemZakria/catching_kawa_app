@@ -105,10 +105,10 @@ class S {
   }
 
   /// `Forgot password?`
-  String get forgot_password {
+  String get did_you_forgot_password {
     return Intl.message(
       'Forgot password?',
-      name: 'forgot_password',
+      name: 'did_you_forgot_password',
       desc: '',
       args: [],
     );
@@ -212,6 +212,26 @@ class S {
   /// `About Us`
   String get about_us {
     return Intl.message('About Us', name: 'about_us', desc: '', args: []);
+  }
+
+  /// ` Forgot Password`
+  String get forgot_password {
+    return Intl.message(
+      ' Forgot Password',
+      name: 'forgot_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Passwords do not match`
+  String get password_mismatch {
+    return Intl.message(
+      'Passwords do not match',
+      name: 'password_mismatch',
+      desc: '',
+      args: [],
+    );
   }
 }
 

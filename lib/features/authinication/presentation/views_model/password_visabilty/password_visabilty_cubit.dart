@@ -11,9 +11,11 @@ class PasswordVisabiltyCubit extends Cubit<PasswordVisabiltyState> {
     if (visability == false) {
       visability = true;
       passwordIcon = Icons.visibility_off_outlined;
+      emit(PasswordVisabileState());
     } else {
       visability = false;
       passwordIcon = Icons.visibility_outlined;
+      emit(PasswordUnVisabileState());
     }
   }
 }

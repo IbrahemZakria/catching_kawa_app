@@ -20,4 +20,9 @@ class UserMessage {
       fontSize: 16.0,
     );
   }
+
+  static void showErrorMessage({
+    required BuildContext context,
+    required message,
+  }) {}
 }
