@@ -42,7 +42,7 @@ class CatchingKawaApp extends StatelessWidget {
                 backgroundColor: AppColors.white,
                 titleTextStyle: Styles.textStyle20,
                 centerTitle: true,
-                iconTheme: IconThemeData(color: AppColors.primary),
+                iconTheme: IconThemeData(color: AppColors.black),
               ),
               iconTheme: IconThemeData(color: AppColors.primary),
               scaffoldBackgroundColor: AppColors.white,
