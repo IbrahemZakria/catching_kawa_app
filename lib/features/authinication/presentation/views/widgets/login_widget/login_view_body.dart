@@ -4,7 +4,8 @@ import 'package:catching_kawa_app/core/widgts/custom_button.dart';
 import 'package:catching_kawa_app/core/widgts/custome_text_form_field.dart';
 import 'package:catching_kawa_app/core/widgts/user_message.dart';
 import 'package:catching_kawa_app/features/authinication/presentation/views/forgot_password_view.dart';
-import 'package:catching_kawa_app/features/authinication/presentation/views/widgets/all_login_icons_widget.dart';
+import 'package:catching_kawa_app/features/authinication/presentation/views/widgets/login_widget/all_login_icons_widget.dart';
+import 'package:catching_kawa_app/features/authinication/presentation/views/widgets/text_widget.dart';
 import 'package:catching_kawa_app/features/authinication/presentation/views_model/password_visabilty/password_visabilty_cubit.dart';
 import 'package:catching_kawa_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -33,14 +34,7 @@ class LoginViewBody extends StatelessWidget {
                     SizedBox(height: size.height * .1),
                     Image.asset(AssetsData.logo, height: size.height * .13),
                     SizedBox(height: 16),
-                    Row(
-                      children: [
-                        Text(
-                          S.of(context).Personal_id,
-                          style: Styles.textStyle16,
-                        ),
-                      ],
-                    ),
+                    TextWidget(text: S.of(context).Personal_id),
                     SizedBox(height: 8),
 
                     CustomeTextFormField.custometextformfield(
@@ -48,8 +42,12 @@ class LoginViewBody extends StatelessWidget {
                       validator: (value) {
                         if (value == null || value.isEmpty) {
                           return S.of(context).required_id;
+                        } else if (value is int ||
+                            value.toString().length != 14) {
+                          return S.of(context).wrong_data;
+                        } else {
+                          return null;
                         }
-                        return null;
                       },
                       prefixIcon: IconButton(
                         onPressed: () {},
@@ -59,14 +57,7 @@ class LoginViewBody extends StatelessWidget {
                       hintText: S.of(context).enter_id,
                     ),
                     SizedBox(height: 16),
-                    Row(
-                      children: [
-                        Text(
-                          S.of(context).required_password,
-                          style: Styles.textStyle16,
-                        ),
-                      ],
-                    ),
+                    TextWidget(text: S.of(context).required_password),
                     SizedBox(height: 8),
 
                     BlocBuilder<PasswordVisabiltyCubit, PasswordVisabiltyState>(

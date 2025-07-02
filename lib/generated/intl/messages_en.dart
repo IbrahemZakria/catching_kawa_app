@@ -44,7 +44,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "forgot_password": MessageLookupByLibrary.simpleMessage(" Forgot Password"),
     "lang": MessageLookupByLibrary.simpleMessage("English"),
     "login": MessageLookupByLibrary.simpleMessage("Login"),
+    "message_to_enter_id": MessageLookupByLibrary.simpleMessage(
+      "To reset the account by entering the personal id number and receiving an email message",
+    ),
     "new_password": MessageLookupByLibrary.simpleMessage("New Password"),
+    "otp": MessageLookupByLibrary.simpleMessage("OTP"),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
     "password_changed_successfully": MessageLookupByLibrary.simpleMessage(
       "Password changed successfully",
@@ -60,6 +64,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "required_password": MessageLookupByLibrary.simpleMessage(
       "Please enter your password",
+    ),
+    "wrong_data": MessageLookupByLibrary.simpleMessage(
+      "plase enter a valid data",
     ),
     "wrong_password": MessageLookupByLibrary.simpleMessage("Wrong password"),
   };

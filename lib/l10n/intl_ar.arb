@@ -58,7 +58,12 @@
 ,"forgot_password":"نسيت كلمة المرور",
 "@forgot_password": {}
 ,"password_mismatch":"كلمة المرور غير متطابقة",
-"@password_mismatch": {}
-
+"@password_mismatch": {},
+"otp":" التحقق الثنائى",
+"@otp": {}
+,"wrong_data":"لو سمحت ادخل قيمه صحيحه",
+"@wrong_data": {}
+,"message_to_enter_id":" لاستعادة الحساب عن طريق إدخال رقم البطاقة الشخصية وتلقي رسالة عبر البريد الالكتروني",
+"@message_to_enter_id": {}
 
 }

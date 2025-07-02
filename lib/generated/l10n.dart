@@ -233,6 +233,31 @@ class S {
       args: [],
     );
   }
+
+  /// `OTP`
+  String get otp {
+    return Intl.message('OTP', name: 'otp', desc: '', args: []);
+  }
+
+  /// `plase enter a valid data`
+  String get wrong_data {
+    return Intl.message(
+      'plase enter a valid data',
+      name: 'wrong_data',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `To reset the account by entering the personal id number and receiving an email message`
+  String get message_to_enter_id {
+    return Intl.message(
+      'To reset the account by entering the personal id number and receiving an email message',
+      name: 'message_to_enter_id',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

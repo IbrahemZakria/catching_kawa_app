@@ -3,6 +3,7 @@ import 'package:catching_kawa_app/core/utils/styels.dart';
 import 'package:catching_kawa_app/core/widgts/custom_button.dart';
 import 'package:catching_kawa_app/core/widgts/custome_text_form_field.dart';
 import 'package:catching_kawa_app/features/authinication/presentation/views/o_t_p_view.dart';
+import 'package:catching_kawa_app/features/authinication/presentation/views/widgets/text_widget.dart';
 import 'package:catching_kawa_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
@@ -27,18 +28,15 @@ class ForgotPasswordBody extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 37.0),
                 child: Text(
-                  S.of(context).change_password_message('1234567890'),
+                  S.of(context).message_to_enter_id,
                   style: Styles.textStyle14,
                   textAlign: TextAlign.center,
                 ),
               ),
 
               const SizedBox(height: 48),
-              Row(
-                children: [
-                  Text(S.of(context).enter_id, style: Styles.textStyle16),
-                ],
-              ),
+              TextWidget(text: S.of(context).enter_id),
+
               const SizedBox(height: 8),
 
               CustomeTextFormField.custometextformfield(
@@ -46,8 +44,11 @@ class ForgotPasswordBody extends StatelessWidget {
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return S.of(context).required_id;
+                  } else if (value is int || value.toString().length != 14) {
+                    return S.of(context).wrong_data;
+                  } else {
+                    return null;
                   }
-                  return null;
                 },
                 prefixIcon: IconButton(
                   onPressed: () {},

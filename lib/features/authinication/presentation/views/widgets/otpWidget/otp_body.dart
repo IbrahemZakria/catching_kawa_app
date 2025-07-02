@@ -15,12 +15,7 @@ class OtpBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('OTP', style: TextStyle(color: Colors.black)),
-        backgroundColor: Colors.white,
-        elevation: 0,
-        centerTitle: true,
-      ),
+      appBar: AppBar(title: Text(S.of(context).otp)),
       body: Form(
         key: _formKey,
         child: Padding(
@@ -47,7 +42,7 @@ class OtpBody extends StatelessWidget {
                   } else if (value.length < 4) {
                     return 'Code must be 4 digits';
                   }
-                  return null; // ✅ valid
+                  return null;
                 },
               ),
               const SizedBox(height: 24),
@@ -58,11 +53,7 @@ class OtpBody extends StatelessWidget {
               CustomButton(
                 onTap: () {
                   if (_formKey.currentState!.validate()) {
-                    // Handle OTP confirmation logic here
-                    Navigator.pushNamed(
-                      context,
-                      NewPasswordView.routeName,
-                    ); // Navigate to new password view
+                    Navigator.pushNamed(context, NewPasswordView.routeName);
                   }
                 },
                 text: S.of(context).confirm,

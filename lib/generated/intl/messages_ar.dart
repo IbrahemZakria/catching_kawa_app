@@ -46,7 +46,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "forgot_password": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
     "lang": MessageLookupByLibrary.simpleMessage("عربى"),
     "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "message_to_enter_id": MessageLookupByLibrary.simpleMessage(
+      " لاستعادة الحساب عن طريق إدخال رقم البطاقة الشخصية وتلقي رسالة عبر البريد الالكتروني",
+    ),
     "new_password": MessageLookupByLibrary.simpleMessage("كلمة المرور الجديدة"),
+    "otp": MessageLookupByLibrary.simpleMessage(" التحقق الثنائى"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
     "password_changed_successfully": MessageLookupByLibrary.simpleMessage(
       "تم تغيير كلمة المرور بنجاح",
@@ -62,6 +66,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "required_password": MessageLookupByLibrary.simpleMessage(
       "يرجى إدخال كلمة المرور",
+    ),
+    "wrong_data": MessageLookupByLibrary.simpleMessage(
+      "لو سمحت ادخل قيمه صحيحه",
     ),
     "wrong_password": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور غير صحيحة",

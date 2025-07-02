@@ -57,7 +57,10 @@
 "@forgot_password": {}
 ,"password_mismatch":"Passwords do not match",
 "@password_mismatch": {}
-
-
+,"otp":"OTP",
+"@otp": {}
+,"wrong_data":"plase enter a valid data",
+"@wrong_data": {},
+"message_to_enter_id":"To reset the account by entering the personal id number and receiving an email message","@message_to_enter_id": {}
 
 }

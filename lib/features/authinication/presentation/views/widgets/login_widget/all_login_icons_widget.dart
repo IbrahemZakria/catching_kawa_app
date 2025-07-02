@@ -1,5 +1,5 @@
 import 'package:catching_kawa_app/core/utils/cubits/localization/localization_cubit.dart';
-import 'package:catching_kawa_app/features/authinication/presentation/views/widgets/login_icon_widget.dart';
+import 'package:catching_kawa_app/features/authinication/presentation/views/widgets/login_widget/login_icon_widget.dart';
 import 'package:catching_kawa_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
