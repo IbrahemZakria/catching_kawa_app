@@ -1,15 +1,8 @@
 import 'dart:io';
 
+import 'package:catching_kawa_app/core/helper/error/failures.dart';
 import 'package:dio/dio.dart';
 
-// الكلاس الأساسي (يفترض أنه موجود)
-abstract class Failures {
-  final String errorMessage;
-
-  Failures(this.errorMessage);
-}
-
-// كلاس ServerError لمعالجة أخطاء Dio
 class ServerError extends Failures {
   ServerError(super.errorMessage);
 

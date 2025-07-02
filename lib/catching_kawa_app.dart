@@ -7,7 +7,6 @@ import 'package:catching_kawa_app/features/authinication/presentation/views/forg
 import 'package:catching_kawa_app/features/authinication/presentation/views/login_view.dart';
 import 'package:catching_kawa_app/features/authinication/presentation/views/new_password_view.dart';
 import 'package:catching_kawa_app/features/authinication/presentation/views/o_t_p_view.dart';
-import 'package:catching_kawa_app/features/authinication/presentation/views/regesrer_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -53,7 +52,6 @@ class CatchingKawaApp extends StatelessWidget {
             ),
             routes: {
               LoginView.routeName: (context) => const LoginView(),
-              RegesrerView.routeName: (context) => const RegesrerView(),
               OTPView.routeName: (context) => const OTPView(),
               ForgotPasswordView.routeName: (context) =>
                   const ForgotPasswordView(),
