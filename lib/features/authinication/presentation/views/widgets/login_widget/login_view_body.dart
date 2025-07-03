@@ -1,10 +1,11 @@
 import 'package:catching_kawa_app/core/utils/assets.dart';
 import 'package:catching_kawa_app/core/utils/styels.dart';
 import 'package:catching_kawa_app/core/widgts/custom_button.dart';
-import 'package:catching_kawa_app/core/widgts/custome_text_form_field.dart';
 import 'package:catching_kawa_app/core/widgts/user_message.dart';
 import 'package:catching_kawa_app/features/authinication/presentation/views/forgot_password_view.dart';
 import 'package:catching_kawa_app/features/authinication/presentation/views/widgets/login_widget/all_login_icons_widget.dart';
+import 'package:catching_kawa_app/features/authinication/presentation/views/widgets/text_form_field_widget/id_form_field.dart';
+import 'package:catching_kawa_app/features/authinication/presentation/views/widgets/text_form_field_widget/pass_form_field.dart';
 import 'package:catching_kawa_app/features/authinication/presentation/views/widgets/text_widget.dart';
 import 'package:catching_kawa_app/features/authinication/presentation/views_model/password_visabilty/password_visabilty_cubit.dart';
 import 'package:catching_kawa_app/generated/l10n.dart';
@@ -36,60 +37,12 @@ class LoginViewBody extends StatelessWidget {
                     SizedBox(height: 16),
                     TextWidget(text: S.of(context).Personal_id),
                     SizedBox(height: 8),
+                    IDFormField(idControler: idControler),
 
-                    CustomeTextFormField.custometextformfield(
-                      controller: idControler,
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return S.of(context).required_id;
-                        } else if (value is int ||
-                            value.toString().length != 14) {
-                          return S.of(context).wrong_data;
-                        } else {
-                          return null;
-                        }
-                      },
-                      prefixIcon: IconButton(
-                        onPressed: () {},
-                        icon: Icon(Icons.perm_identity),
-                      ),
-                      textType: TextInputType.phone,
-                      hintText: S.of(context).enter_id,
-                    ),
                     SizedBox(height: 16),
                     TextWidget(text: S.of(context).required_password),
                     SizedBox(height: 8),
-
-                    BlocBuilder<PasswordVisabiltyCubit, PasswordVisabiltyState>(
-                      builder: (context, state) {
-                        var passbloc = BlocProvider.of<PasswordVisabiltyCubit>(
-                          context,
-                        );
-
-                        return CustomeTextFormField.custometextformfield(
-                          controller: passwordController,
-                          validator: (value) {
-                            if (value == null || value.isEmpty) {
-                              return S.of(context).required_password;
-                            }
-                            return null;
-                          },
-                          textType: TextInputType.visiblePassword,
-                          suffixIcon: IconButton(
-                            onPressed: () {
-                              passbloc.passwordVisabilty();
-                            },
-                            icon: Icon(passbloc.passwordIcon),
-                          ),
-                          obscureText: passbloc.visability,
-                          hintText: S.of(context).password,
-                          prefixIcon: IconButton(
-                            onPressed: () {},
-                            icon: Icon(Icons.lock),
-                          ),
-                        );
-                      },
-                    ),
+                    PassFormField(passwordController: passwordController),
                     Row(
                       children: [
                         TextButton(

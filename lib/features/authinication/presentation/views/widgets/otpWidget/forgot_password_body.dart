@@ -1,8 +1,8 @@
 import 'package:catching_kawa_app/core/utils/assets.dart';
 import 'package:catching_kawa_app/core/utils/styels.dart';
 import 'package:catching_kawa_app/core/widgts/custom_button.dart';
-import 'package:catching_kawa_app/core/widgts/custome_text_form_field.dart';
 import 'package:catching_kawa_app/features/authinication/presentation/views/o_t_p_view.dart';
+import 'package:catching_kawa_app/features/authinication/presentation/views/widgets/text_form_field_widget/id_form_field.dart';
 import 'package:catching_kawa_app/features/authinication/presentation/views/widgets/text_widget.dart';
 import 'package:catching_kawa_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -38,25 +38,8 @@ class ForgotPasswordBody extends StatelessWidget {
               TextWidget(text: S.of(context).enter_id),
 
               const SizedBox(height: 8),
+              IDFormField(idControler: idControler),
 
-              CustomeTextFormField.custometextformfield(
-                controller: idControler,
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return S.of(context).required_id;
-                  } else if (value is int || value.toString().length != 14) {
-                    return S.of(context).wrong_data;
-                  } else {
-                    return null;
-                  }
-                },
-                prefixIcon: IconButton(
-                  onPressed: () {},
-                  icon: Icon(Icons.perm_identity),
-                ),
-                textType: TextInputType.phone,
-                hintText: S.of(context).enter_id,
-              ),
               SizedBox(height: 16),
 
               CustomButton(
